@@ -31,8 +31,11 @@ export class StudentService {
   }
   
   public delete(id:number){
-    console.log('http://localhost:8080/delete/'+id);
-    return this.http.delete('http://localhost:8080/delete/'+id);
+   return this.http.delete('http://localhost:8080/delete/'+id);
+  }
+
+  public search(id:number){
+    return this.http.delete('http://localhost:8080/list/'+id);
   }
 
 }

@@ -33,4 +33,10 @@ export class StudentlistComponent implements OnInit {
     });
   }
 
+  searchstd(id:number){
+    this.stdservice.search(id).subscribe(data => {
+      console.log("done.")
+    });
+  }
+
 }

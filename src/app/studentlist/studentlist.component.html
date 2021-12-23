@@ -1,6 +1,10 @@
 <div>
   <button class="addbtn" (click)="addstd()">Add Student</button>
 </div>
+<div>
+  <input type="text" placeholder="Enter ID" value="" #search>
+  <button class="searchbtn" (click)="searchstd(search.value)">search</button>
+</div>
 <table>
     <thead>
       <tr>
