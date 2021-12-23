@@ -1,0 +1,30 @@
+button{
+    border: 2px;
+    width: 95%;
+    outline: none;
+    border-radius: 8px;
+    height: 40px;
+    background: #0b71e6;
+    color: #fff;
+    font-size: 20px;
+    
+     
+}
+.addbtn{
+    width: 80%;
+    margin: 140px 0 0 158px;
+}
+table{
+    background-color: rgb(59, 49, 49);
+    border-radius: 10px;
+    margin: 1px auto; 
+    border: antiquewhite;  
+    width: 80%;
+}
+thead,tbody{
+    font-size: 20px;
+    color: blanchedalmond;
+    text-align: center;
+    
+    
+}

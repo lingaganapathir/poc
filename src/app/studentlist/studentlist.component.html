@@ -1,0 +1,26 @@
+<div>
+  <button class="addbtn" (click)="addstd()">Add Student</button>
+</div>
+<table>
+    <thead>
+      <tr>
+        <th>  ID  </th>
+        <th>  Name  </th>
+        <th>  Fathername  </th>
+        <th>  Phnumber  </th>
+        <th>  Address  </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of std">
+        <td>{{ student.id }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.fathername }}</td>
+        <td>{{ student.address }}</td>
+        <td>{{ student.phnum }}</td>
+        <td><button (click)="edit(student)">Edit</button></td>
+        <td><button (click)="delete(student.id)">Delete</button></td> 
+        <!-- <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td> -->
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,47 @@
+.error{
+    color: red;
+    font-size: 12px;
+}
+p{
+    font-size: 20px;
+    color: blanchedalmond;
+    text-align: center;
+    padding: 0 0px;
+    margin: 1px 0 1px 0;
+}
+div{
+    padding-top: 10px;
+}
+button{
+    border: 2px;
+    width: 95%;
+    outline: none;
+    border-radius: 8px;
+    height: 40px;
+    background: #fa2104;
+    color: #fff;
+    font-size: 20px;
+    margin: 4px 0 5px 8px;    
+}
+.invalidbutton{
+    background: #f38071;
+}
+input{
+    border: none;
+  border-bottom: 1px solid #fff;
+  background: rgb(75, 74, 74);
+  outline: none;
+  height: 30px;
+  width: 90%;
+  color: rgb(250, 246, 246);
+  font-size: 16px;
+  text-align: center;
+  margin: 0 0 0 14px;
+}
+form{
+    background-color: black;
+    border-radius: 10px;
+    width: 300px; 
+    height: 440px;
+    margin: 150px auto;   
+}

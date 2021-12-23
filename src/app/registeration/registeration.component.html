@@ -1,0 +1,26 @@
+<html>
+    <body>
+        
+        <form>
+            <div class="form">
+            <p>CANDIDATE NAME</p>
+            <input required type="text" name="name" [(ngModel)]="student.name" placeholder="name" #name="ngModel">
+            <p><span class="error">Candidate Name is required.</span></p>
+            <p>ADDRESS </p>
+            <input required type="text" name="address" [(ngModel)]="student.address" placeholder="address" #address="ngModel">
+            <p><span class="error">Address is required.</span></p>
+            <p>PH NUMBER</p>
+            <input required type="text" name="phone_number" [(ngModel)]="student.phnum" placeholder="phone_number" #phonenum="ngModel">
+            <p><span class="error">Phone number is required.</span></p>
+            <p>FATHER NAME</p>
+            <input required type="text" name="father_name" [(ngModel)]="student.fathername" placeholder="father_name" #fathername="ngModel">
+            <p><span class="error">Father Name is required.</span></p>
+             
+            <button *ngIf="name.valid && address.valid && phonenum.valid && fathername.valid" (click)="onsubmit()">save</button>
+            <button *ngIf="name.invalid || address.invalid || phonenum.invalid || fathername.invalid" class="invalidbutton" (click)="popupalert()">save</button><br>
+            <button (click)="listall()">list all students</button>
+        </div>
+        </form>
+    
+    </body>
+</html>

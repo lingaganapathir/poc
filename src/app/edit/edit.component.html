@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <form action="">
+            <div>
+                <h6>Update</h6>
+            <p>CANDIDATE NAME</p>
+            <input required type="text" name="name" [value]="student.name" [(ngModel)]="student.name" #name="ngModel">
+            <p>ADDRESS</p>
+            <input required type="text" name="address" [value]="student.address" [(ngModel)]="student.address" #address="ngModel">
+            <p>PH NUMBER</p>
+            <input required type="text" name="phone_number" [value]="student.phnum" [(ngModel)]="student.phnum" #phnum="ngModel">
+            <p>FATHER NAME</p>
+            <input required type="text" name="father_name" [value]="student.fathername" [(ngModel)]="student.fathername" #fname="ngModel">
+            
+            <!-- <button (click)="update()">save</button> -->
+            <button *ngIf="name.valid && address.valid && phnum.valid && fname.valid" (click)="update()">save</button>
+            <button *ngIf="name.invalid || address.invalid || phnum.invalid || fname.invalid" class="invalidbutton" (click)="popupalert()">save</button>
+        </div>
+        </form>
+    </body>
+</html>

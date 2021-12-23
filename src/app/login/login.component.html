@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <form action="">
+            <div>
+                <h6>Login</h6>
+            <p>USER NAME</p>
+            <!-- <input type="text" required name="user_name" placeholder="User name" (keyup)="onkeyupun(uname.value)" [value]="u_name" #uname="ngModel"> -->
+            <input required type="text" name="user_name" placeholder="User name" [(ngModel)]="login.uname"  #u_name="ngModel">
+            <p>PASSWORD</p> 
+            <input required type="text" name="password" placeholder="password" [(ngModel)]="login.pass"  #passw="ngModel">
+            <button *ngIf="u_name.valid && passw.valid" (click)="write()">submit</button> 
+            <button class="invalidbtn" *ngIf="u_name.invalid || passw.invalid" (click)="popupalert()">submit</button>
+        </div>
+        </form>
+    </body>
+</html>
