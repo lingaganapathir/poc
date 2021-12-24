@@ -3,7 +3,7 @@
 </div>
 <div>
   <input type="text" placeholder="Enter ID" value="" #search>
-  <button class="searchbtn" (click)="searchstd(search.value)">search</button>
+  <button class="searchbtn" (click)="searchstd(search.value)">search</button>  
 </div>
 <table>
     <thead>
@@ -11,8 +11,8 @@
         <th>  ID  </th>
         <th>  Name  </th>
         <th>  Fathername  </th>
-        <th>  Phnumber  </th>
         <th>  Address  </th>
+        <th>  Phnumber  </th>
       </tr>
     </thead>
     <tbody>
@@ -23,8 +23,7 @@
         <td>{{ student.address }}</td>
         <td>{{ student.phnum }}</td>
         <td><button (click)="edit(student)">Edit</button></td>
-        <td><button (click)="delete(student.id)">Delete</button></td> 
-        <!-- <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td> -->
+        <td><button (click)="delete(student.id)">Delete</button></td>
       </tr>
     </tbody>
   </table>

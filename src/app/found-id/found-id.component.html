@@ -1,0 +1,35 @@
+<div>
+    <button class="addbtn" (click)="addstd()">Add Student</button>
+  </div>
+  <div class="srch">
+    <input required type="text" placeholder="Enter ID" value=""  #search>
+    <button class="searchbtn" (click)="searchstd(search.value)">search</button>
+    <!-- <button *ngIf="search.invalid" class="searchbtn">search</button> -->
+  </div>
+  <table>
+      <thead>
+        <tr>
+          <th>  ID  </th>
+          <th>  Name  </th>
+          <th>  Fathername  </th>
+          <th>  Address  </th>
+          <th>  Phnumber  </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ stud.id }}</td>
+          <td>{{ stud.name }}</td>
+          <td>{{ stud.fathername }}</td>
+          <td>{{ stud.address }}</td>
+          <td>{{ stud.phnum }}</td>
+          <td><button (click)="edit(stud)">Edit</button></td>
+          <td><button (click)="delete(stud.id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    
+            <div  *ngIf="errorMsg">
+                <p>{{ errorMsg }}</p>
+            </div>
+        

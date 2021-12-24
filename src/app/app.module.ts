@@ -11,6 +11,7 @@ import { StudentService } from './student.service';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentlistComponent } from './studentlist/studentlist.component';
 import { EditComponent } from './edit/edit.component';
+import { FoundIdComponent } from './found-id/found-id.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { EditComponent } from './edit/edit.component';
     RegisterationComponent,
     StudentlistComponent,
     EditComponent,
+    FoundIdComponent,
       ],
   imports: [
     BrowserModule,

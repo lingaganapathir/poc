@@ -6,11 +6,12 @@ button{
     height: 40px;
     background: #0b71e6;
     color: #fff;
-    font-size: 20px;     
+    font-size: 20px;   
+    
 }
 .addbtn{
     width: 80%;
-    margin: 140px 0 0 158px;
+    margin: 150px 0 0 158px;
 }
 .searchbtn{
     width: 20%;
@@ -25,6 +26,7 @@ input{
     border-radius: 8px;
     margin: 20px 0 0 158px;
 }
+
 table{
     background-color: rgb(59, 49, 49);
     border-radius: 10px;
@@ -35,7 +37,5 @@ table{
 thead,tbody{
     font-size: 20px;
     color: blanchedalmond;
-    text-align: center;
-    
-    
+    text-align: center;    
 }

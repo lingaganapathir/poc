@@ -23,10 +23,12 @@ export class RegisterationComponent implements OnInit {
 
   onsubmit() {
     this.studentservice.save(this.student).subscribe((data) => console.log(this.student));
-    this.router.navigateByUrl('/list');
-    this.studentservice.listall().subscribe(data => {
-      console.log(data)
-    });
+    
+    this.studentservice.listall().subscribe(data => {console.log(data)});
+    setTimeout(() => {
+      this.router.navigateByUrl('/list');
+    }, 500);
+    
   }
   popupalert(){
     alert("Enter value in all the fields.")
@@ -35,6 +37,5 @@ export class RegisterationComponent implements OnInit {
   listall(){
     this.router.navigateByUrl('/list');
   }
-
-  
+    
 }

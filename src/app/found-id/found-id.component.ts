@@ -4,21 +4,25 @@ import { Student } from '../student';
 import { StudentService } from '../student.service';
 
 @Component({
-  selector: 'app-studentlist',
-  templateUrl: './studentlist.component.html',
-  styleUrls: ['./studentlist.component.css']
+  selector: 'app-found-id',
+  templateUrl: './found-id.component.html',
+  styleUrls: ['./found-id.component.css']
 })
-export class StudentlistComponent implements OnInit {
+export class FoundIdComponent implements OnInit {
 
   std:Student[];
-  stud:Student;
+  stud: Student;
+  id:number;
+  errorMsg = null;
   constructor(private stdservice:StudentService,private router: Router) { }
 
-  ngOnInit(){
-    this.stdservice.listall().subscribe(data => {
-      this.std = data;
+  ngOnInit(): void {
+    this.id = this.stdservice.sid;
+    this.stdservice.search(this.id).subscribe(data => {this.stud = data},error=>{
+      this.errorMsg = error
     });
   }
+
   edit(student:Student){
     this.stdservice.setter(student);
     this.router.navigateByUrl('/edit');
@@ -39,10 +43,20 @@ export class StudentlistComponent implements OnInit {
       this.router.navigateByUrl('/list');
     }, 200);
   }
-
   searchstd(id:number){
-    this.stdservice.searchid(id);
-    this.router.navigateByUrl('/search');
+    this.errorMsg = null;
+    this.stdservice.searchid(id);    
+    this.id = this.stdservice.sid;
+    setTimeout(() => {      
+      this.stdservice.search(this.id).subscribe(data => {this.stud = data},
+      error=>{
+        this.errorMsg = error
+      });
+      console.log(this.errorMsg);
+    }, 200);
+    setTimeout(() => {
+      this.router.navigateByUrl('/search');
+    }, 400);
   }
 
 }
