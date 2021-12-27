@@ -57,7 +57,7 @@ export class StudentService {
         console.error('An error occurred:', httpError.error.message);
     }
     // Return an observable with a user-facing error message.
-    return throwError(` Not found, `+'please try again.');
+    return throwError(`${httpError.error} Not found, `+'please try again.');
   }
 
 }

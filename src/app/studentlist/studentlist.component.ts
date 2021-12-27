@@ -29,9 +29,8 @@ export class StudentlistComponent implements OnInit {
 
   delete(id: number){
     //this.stdservice.delete(id);
-    this.stdservice.delete(id).subscribe(data => {
-      console.log(id)
-    });
+    this.stdservice.delete(id).subscribe(data => { 
+      console.log(id) });
     this.stdservice.listall().subscribe(data => {
       this.std = data;
     });

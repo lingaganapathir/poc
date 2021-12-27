@@ -6,7 +6,7 @@
     <button class="searchbtn" (click)="searchstd(search.value)">search</button>
     <!-- <button *ngIf="search.invalid" class="searchbtn">search</button> -->
   </div>
-  <table>
+  <table *ngIf="!errorMsg">
       <thead>
         <tr>
           <th>  ID  </th>

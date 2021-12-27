@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Student } from '../student';
@@ -33,9 +34,7 @@ export class FoundIdComponent implements OnInit {
 
   delete(id: number){
     //this.stdservice.delete(id);
-    this.stdservice.delete(id).subscribe(data => {
-      console.log(id)
-    });
+    this.stdservice.delete(id).subscribe(data => { console.log(id) });
     this.stdservice.listall().subscribe(data => {
       this.std = data;
     });
@@ -49,7 +48,7 @@ export class FoundIdComponent implements OnInit {
     this.id = this.stdservice.sid;
     setTimeout(() => {      
       this.stdservice.search(this.id).subscribe(data => {this.stud = data},
-      error=>{
+      (error:HttpErrorResponse)=>{
         this.errorMsg = error
       });
       console.log(this.errorMsg);
